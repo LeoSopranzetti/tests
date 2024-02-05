@@ -1,3 +1,12 @@
-const message = "hello world!"
+const readline = require('readline');
 
-document.querySelector('#header').innerHTML = message;
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// Exemplo de código que lê uma linha do console
+rl.question('Digite o nome do seu jogador ', (resposta) => {
+  console.log(`Bem vindo ${resposta}`);
+  rl.close();
+});
